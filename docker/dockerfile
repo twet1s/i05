@@ -1,0 +1,6 @@
+from ubuntu
+run apt update
+run apt install apache2-y
+copy index.html /var/www/html
+expose 80
+cmd ["apache2ctl", "-D", "FOREGROUND"]
